@@ -6,6 +6,7 @@
 package boletin29;
 
 /**
+    public Barco(int diasDeOcupacion, float longitud, String ma
  *
  * @author Bea
  */
