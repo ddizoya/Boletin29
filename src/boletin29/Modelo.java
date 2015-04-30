@@ -7,7 +7,9 @@
 package boletin29;
 
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Modelo {
-    public ArrayList <Barco> listado = new ArrayList<>();
+    public Map <Integer,Barco> listado = new TreeMap<>();
 }

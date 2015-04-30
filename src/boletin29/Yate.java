@@ -5,17 +5,17 @@
  */
 package boletin29;
 
+import javax.swing.JOptionPane;
 
 public class Yate extends Barco {
+
     private float potencia;
     private int nCamarotes;
-
-    
 
     public Yate(float longitud, int diasDeOcupacion, float potencia, int nCamarotes) {
         super(longitud, diasDeOcupacion);
         this.potencia = potencia;
-        this.nCamarotes= nCamarotes;
+        this.nCamarotes = nCamarotes;
     }
 
     public float getPotencia() {
@@ -36,13 +36,19 @@ public class Yate extends Barco {
 
     @Override
     public void modulo() {
-        alquiler =  super.alquiler() + precio * potencia + precio * nCamarotes;
+        alquiler = super.alquiler() + precio * potencia + precio * nCamarotes;
     }
+
     @Override
-    public void factura(){
-        super.factura();
+    public void factura() {
+        JOptionPane.showMessageDialog(null, "***Factura*** \n "
+                + "Alquiler: " + alquiler + "\n"
+                + "Matrícula: " + matricula + "\n"
+                + "Longitud: " + longitud + "\n"
+                + "Número de camarotes: " + nCamarotes + "\n"
+                + "Potencia: " + potencia + "\n"
+                + "***FIN FACTURA***");
+
     }
-
-
 
 }
