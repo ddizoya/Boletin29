@@ -12,7 +12,7 @@ public class Velero extends Barco {
     private int nMastiles;
 
     public Velero(int diasDeOcupacion, float longitud, int nMastiles) {
-        super(diasDeOcupacion, longitud);
+        super(longitud, diasDeOcupacion);
         this.nMastiles = nMastiles;
     }
 

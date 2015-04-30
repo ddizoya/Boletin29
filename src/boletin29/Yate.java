@@ -10,8 +10,10 @@ public class Yate extends Barco {
     private float potencia;
     private int nCamarotes;
 
-    public Yate(int diasDeOcupacion, float longitud, float potencia, int nCamarotes) {
-        super(diasDeOcupacion, longitud);
+    
+
+    public Yate(float longitud, int diasDeOcupacion, float potencia, int nCamarotes) {
+        super(longitud, diasDeOcupacion);
         this.potencia = potencia;
         this.nCamarotes= nCamarotes;
     }

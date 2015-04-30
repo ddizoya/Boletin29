@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 
 public abstract class Barco implements IBarco {
-       Random rd = new Random();
+       private Random rd = new Random();
        static int stock = 130;
        public int diasDeOcupacion;
        public float longitud;
@@ -18,9 +18,10 @@ public abstract class Barco implements IBarco {
        public float alquiler = (float) 130.60;
        public float precio = (float)20.45;
 
-    public Barco(int diasDeOcupacion, float longitud) {
-        this.diasDeOcupacion = diasDeOcupacion;
-        this.longitud = longitud;
+    public Barco(float longitud, int diasDeOcupacion){
+        this.longitud = (float)longitud;
+        this.diasDeOcupacion= diasDeOcupacion;
+        
         }
     
     public float alquiler (){
