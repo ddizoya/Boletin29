@@ -5,17 +5,30 @@
  */
 package boletin29;
 
-/**
- *
- * @author Bea
- */
+import javax.swing.JOptionPane;
+
+
 public class Boletin29 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+    Modelo mod = new Modelo();
+         
     }
     
+    public static void menu(){
+        int indice = JOptionPane.showOptionDialog(null, "¿De qué tipo?", null, JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Alquilar barco","Mostrar factura","Salir"},null);
+        
+        switch(indice){
+            case 0:
+                int banderilla = JOptionPane.showOptionDialog(null, "¿De qué tipo?", null, JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Yate","Deportivo","Velero"},null);
+                if (banderilla == 1){
+                    
+                    Barco obj = new Yate
+                }
+        }
+    }
 }

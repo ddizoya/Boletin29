@@ -5,21 +5,36 @@
  */
 package boletin29;
 
-/**
-    public Barco(int diasDeOcupacion, float longitud, String ma
- *
- * @author Bea
- */
-public abstract class Barco implements IBarcos {
-       private int diasDeOcupacion;
-       private float longitud;
-       private String matricula;
-       private float alquiler;
+import java.util.Random;
+import javax.swing.JOptionPane;
 
-    public Barco(int diasDeOcupacion, float longitud, String matricula, float alquiler, float precio) {
+
+public abstract class Barco implements IBarco {
+       Random rd = new Random();
+       static int stock = 130;
+       public int diasDeOcupacion;
+       public float longitud;
+       public String matricula = "PO"+rd.nextInt(10000)+"ES"+rd.nextInt(30);
+       public float alquiler = (float) 130.60;
+       public float precio = (float)20.45;
+
+    public Barco(int diasDeOcupacion, float longitud) {
         this.diasDeOcupacion = diasDeOcupacion;
         this.longitud = longitud;
-        this.matricula = matricula;
-        this.alquiler = alquiler;
-    }      
+        }
+    
+    public float alquiler (){
+        alquiler = longitud * 10;
+        return alquiler;
+    }
+    
+      public void factura() {
+        JOptionPane.showMessageDialog(null, "***Factura*** \n "
+                + "Alquiler: " + alquiler + "\n"
+                + "Matrícula: " + matricula + "\n"
+                + "Longitud: " + longitud + "\n"
+                + "***FIN FACTURA***");
+                
+    }
+
 }

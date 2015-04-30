@@ -5,11 +5,29 @@
  */
 package boletin29;
 
-/**
- *
- * @author Bea
- */
 public class Deportivo extends Barco {
     private float potencia;
+
+    public Deportivo(int diasDeOcupacion, float longitud, float potencia) {
+        super(diasDeOcupacion, longitud);
+        this.potencia=potencia;
+    }
+
+    public float getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(float potencia) {
+        this.potencia = potencia;
+    }
+    
+    @Override
+    public void modulo() {
+       alquiler = super.alquiler() + (precio * potencia);
+    }
+    @Override
+    public void factura(){
+        super.factura();
+    }
 
 }

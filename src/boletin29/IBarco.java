@@ -5,10 +5,8 @@
  */
 package boletin29;
 
-/**
- *
- * @author Bea
- */
-public interface IBarcos {
+
+public interface IBarco {
     public abstract void modulo ();
+    
 }

@@ -5,13 +5,34 @@
  */
 package boletin29;
 
-public class Velero extends Barco{
+import javax.swing.JOptionPane;
+
+public class Velero extends Barco {
+
     private int nMastiles;
 
-    public Velero(int nMastiles, int diasDeOcupacion, float longitud, String matricula, float alquiler, float precio) {
-        super(diasDeOcupacion, longitud, matricula, alquiler, precio);
+    public Velero(int diasDeOcupacion, float longitud, int nMastiles) {
+        super(diasDeOcupacion, longitud);
+        this.nMastiles = nMastiles;
+    }
+
+    public int getnMastiles() {
+        return nMastiles;
+    }
+
+    public void setnMastiles(int nMastiles) {
         this.nMastiles = nMastiles;
     }
 
     
+    @Override
+    public void modulo() {
+        alquiler = super.alquiler() + precio * nMastiles;
+    }
+
+    @Override
+    public void factura(){
+        super.factura();
+    }
+  
 }
